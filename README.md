@@ -1,4 +1,3 @@
-
 # IMF Gadget API 🚀
 
 A **secure** REST API built with **Node.js, Express, Prisma, PostgreSQL, and TypeScript** for managing **IMF gadgets**.
@@ -24,8 +23,47 @@ A **secure** REST API built with **Node.js, Express, Prisma, PostgreSQL, and Typ
 
 ### 1️⃣ Clone Repo
 
-```sh
-git clone https://github.com/typical-techno/phoenix-dev-challenge.git
-cd phoenix-dev-challenge
+```bash
+git clone https://github.com/amitdhiman5086/imf-gadget-api.git
+cd imf-gadget-api
 ```
-# imf-gadgets
+
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Environment Setup
+
+1. Create a `.env` file in the root directory
+2. Add the following environment variables:
+
+```env
+DATABASE_URL="postgresql://username:password@localhost:5432/imf_gadgets"
+JWT_SECRET="your-super-secret-key"
+PORT=3000
+```
+
+### 4️⃣ Database Setup
+
+```bash
+# Run Prisma migrations
+npx prisma migrate dev
+
+# Seed the database (optional)
+npm run seed
+```
+
+### 5️⃣ Start the Server
+
+```bash
+# Development mode
+npm run dev
+
+# Production mode
+npm run build
+npm start
+```
+
+The API will be available at `http://localhost:3000`

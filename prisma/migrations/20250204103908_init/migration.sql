@@ -1,7 +1,12 @@
--- CreateEnum
-CREATE TYPE "Status" AS ENUM ('Available', 'Deployed', 'Destroyed', 'Decommissioned');
+-- Enum for gadget status
+CREATE TYPE "Status" AS ENUM (
+    'Available', 
+    'Deployed', 
+    'Destroyed', 
+    'Decommissioned'
+);
 
--- CreateTable
+-- Table for storing gadgets information
 CREATE TABLE "gadgets" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
